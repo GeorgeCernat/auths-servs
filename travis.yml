@@ -1,0 +1,7 @@
+
+
+script:
+  - ng build --prod
+  - echo "Deploying!"
+after_sucess:
+  - firebase deploy --token $FIREBASE_TOKEN
