@@ -1,0 +1,28 @@
+.loginForm{
+   text-align: center; 
+   position: fixed;
+   width: 500px;
+   height: 200px;
+   top: 50%;
+   left: 50%;
+   margin-top: -100px;
+   margin-left: -250px; 
+}
+label{
+    width:125px;
+    text-transform: uppercase;
+    display:inline-block
+}
+input{
+    margin-bottom: 10px;
+    width: 50%;
+    outline:none;
+    border:2px solid rgba(26,188,156,1);
+}
+button.truncate{
+    width: 7%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 5px;
+}
