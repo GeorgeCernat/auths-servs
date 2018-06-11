@@ -16,3 +16,9 @@ script:
 
 after_success:
   - firebase deploy --token 1/Et4EiGe6Hon3_rkt_qD8T6nymzkJe4H4sltMpPSG8hM
+
+  deploy:
+    provider: firebase
+    token:
+      secure: 1/Et4EiGe6Hon3_rkt_qD8T6nymzkJe4H4sltMpPSG8hM
+    project: auths-servs
