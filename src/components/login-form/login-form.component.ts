@@ -32,7 +32,7 @@ export class LoginFormComponent implements OnInit {
         const headers = new HttpHeaders()
               .set('Authorization', 'my-auth-token')
               .set('Content-Type', 'application/json');
-        this.http.get('http://127.0.0.1:3000/login/loginRequest/' + this.username + '/' + this.password)
+        this.http.get('https://us-central1-auths-servs.cloudfunctions.net/app/basicLogin/user/pass')
         .subscribe(data => {
           console.log(data);
           if (data === 'success login') {
@@ -42,9 +42,7 @@ export class LoginFormComponent implements OnInit {
           }
           else
             if(data === 'fail login'){
-              // $("#failModalText").html(this.EN.EN_1);
-              $("#failModalText").html("Credentials don't match");
-              $('#failModal').modal('show');
+              
             }
         });
 
@@ -52,8 +50,6 @@ export class LoginFormComponent implements OnInit {
     }
     else {
       console.log('invalid account');
-      $("#failModalText").html("Incorrectly filled input fields");
-      $('#failModal').modal('show'); 
     }
   }
 
